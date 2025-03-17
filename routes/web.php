@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,4 +18,15 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+//raggruppo tutte le rotte per la parte di amministrazione in modo che abbiano 
+//MIDDLEWARE [AUTH, VERIFIED], NAME  delle rotte che inizieranno con admin
+//PREFIX, tutti gli url inizieranno con /admin
+Route::middleware(['auth', 'verified'])
+    ->name('admin.') //es: admin.index
+    ->prefix('admin')
+    ->group(function () {
+        //tutte le rotte che devono aver ele caratteristiche sopra citate 
+        Route::get('/index', [DashboardController::class, 'index'])
+            ->name('index');
+    });
+require __DIR__ . '/auth.php';
