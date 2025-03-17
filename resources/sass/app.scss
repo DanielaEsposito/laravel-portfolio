@@ -6,3 +6,84 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+/*UTILS AND RESET*/
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    }
+    
+    
+    /*variabili*/
+    :root{
+        --dark-gray: #000000;
+        --light-gray: #333;
+        --red: #971010;
+    }
+    
+    body{
+        background-color: var(--light-gray);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; 
+        margin: 0;
+    }
+    .main-content {
+        flex: 1;
+        min-height: calc(100vh - 100px); 
+    }
+    /*HEADER*/
+    .navbar-title{
+        color: white;
+    }
+    
+    
+    /*DASHBOARD*/
+    /*HERO SECTION*/
+    #hero-section{
+        background-color: var(--dark-gray);
+    }
+    .container-img{
+        width: 500px;
+        height: 500px;
+     
+    }
+    .photo-container{
+        height: 500px;
+        width: 500px;
+        background-image: url(../img/img-profilo.jpg);
+        background-size: contain;
+    }
+    /*ABOUT ME*/
+    #about-me{
+        background-color: var(--light-gray);
+    }
+    .about-me{
+        display: inline-block;
+        color:var(--red);
+    }
+    .about-me::before {
+        content: "";
+        display: inline-block;
+        margin-bottom: 5px;
+        margin-right: 4px;
+        background-color: var(--red); 
+        width: 20px;
+        height: 1px;
+    }
+
+    /*LAST PROJECT*/
+    #last-project{
+        background-color: var(--light-gray);
+    }
+    /*FOOTER*/
+    footer {
+       
+        width: 100%;
+        height: 100px;
+        background-color:var(--dark-gray);
+        color: white;
+        text-align: center;
+    
+    }
