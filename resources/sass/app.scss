@@ -1,89 +1,204 @@
 // Fonts
-@import url('https://fonts.bunny.net/css?family=Nunito');
+@import url("https://fonts.bunny.net/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
 
 /*UTILS AND RESET*/
-*{
+* {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    }
-    
-    
-    /*variabili*/
-    :root{
-        --dark-gray: #000000;
-        --light-gray: #333;
-        --red: #971010;
-    }
-    
-    body{
-        background-color: var(--light-gray);
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh; 
-        margin: 0;
-    }
-    .main-content {
-        flex: 1;
-        min-height: calc(100vh - 100px); 
-    }
-    /*HEADER*/
-    .navbar-title{
-        color: white;
-    }
-    
-    
-    /*DASHBOARD*/
-    /*HERO SECTION*/
-    #hero-section{
-        background-color: var(--dark-gray);
-    }
-    .container-img{
-        width: 500px;
-        height: 500px;
-     
-    }
-    .photo-container{
-        height: 500px;
-        width: 500px;
-        background-image: url(../img/img-profilo.jpg);
-        background-size: contain;
-    }
-    /*ABOUT ME*/
-    #about-me{
-        background-color: var(--light-gray);
-    }
-    .about-me{
-        display: inline-block;
-        color:var(--red);
-    }
-    .about-me::before {
-        content: "";
-        display: inline-block;
-        margin-bottom: 5px;
-        margin-right: 4px;
-        background-color: var(--red); 
-        width: 20px;
-        height: 1px;
-    }
+}
 
-    /*LAST PROJECT*/
-    #last-project{
-        background-color: var(--light-gray);
-    }
-    /*FOOTER*/
-    footer {
-       
-        width: 100%;
-        height: 100px;
-        background-color:var(--dark-gray);
-        color: white;
-        text-align: center;
-    
-    }
+/*variabili*/
+:root {
+    --dark-gray: #000000;
+    --light-gray: #202020;
+    --red: #971010;
+}
+
+body {
+    background-color: rgb(5, 5, 5) !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+.main-content {
+    flex: 1;
+    min-height: calc(100vh - 100px);
+}
+/*HEADER*/
+.navbar {
+    height: 100px;
+}
+.nav-link:hover {
+    display: inline-block;
+    border-bottom: 1px solid var(--red);
+    color: var(--red) !important;
+}
+.navbar-title {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/*DASHBOARD*/
+/*HERO SECTION*/
+#hero-section {
+    background-color: var(--dark-gray);
+}
+.container-img {
+    width: 500px;
+    height: 500px;
+}
+.photo-container {
+    height: 370px;
+    background-image: url(../img/img-profilo.jpg);
+    background-size: cover;
+}
+.title-dashboard {
+    font-size: 4rem;
+    color: var(--red);
+}
+.big-line::before {
+    content: "";
+    display: inline-block;
+    margin-bottom: 7px;
+    margin-right: 4px;
+    background-color: var(--red);
+    width: 25px;
+    height: 3px;
+}
+/*ABOUT ME*/
+
+.background {
+    background-color: #303030;
+    padding: 30px;
+}
+.background-about-me {
+    height: 500px;
+}
+
+.small-line {
+    display: inline-block;
+    color: var(--red);
+}
+.small-line::before {
+    content: "";
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-right: 4px;
+    background-color: var(--red);
+    width: 20px;
+    height: 1px;
+}
+.btn-custom {
+    border: 1px solid var(--red) !important;
+    color: white !important;
+}
+.btn-custom:hover {
+    background-color: #5c0000e0 !important;
+}
+
+.container-img {
+    background-color: #5c0000;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    z-index: 1;
+}
+.img-profile {
+    position: absolute;
+    opacity: 0.9;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.skills-items {
+    background-color: var(--light-gray);
+    padding: 10px 40px;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+}
+.line {
+    margin: 0px auto;
+    width: 130px;
+    height: 5px;
+    border: 1px solid var(--red);
+    border-radius: 2px;
+}
+.colored-line {
+    background-color: var(--red);
+    height: 100%;
+}
+.html {
+    width: 98%;
+}
+.css {
+    width: 97%;
+}
+.javascript {
+    width: 80%;
+}
+.bootstrap {
+    width: 80%;
+}
+.react {
+    width: 70%;
+}
+.node {
+    width: 70%;
+}
+.express {
+    width: 70%;
+}
+.php {
+    width: 50%;
+}
+.laravel {
+    width: 60%;
+}
+.mysql {
+    width: 60%;
+}
+/*LAST PROJECT*/
+.card {
+    border: 3px solid var(--red) !important;
+}
+/*CONTACT*/
+
+.form-line {
+    border: 2px solid var(--red);
+    padding: 20px;
+}
+/*INDEX PAGE*/
+#project-hero {
+    background-image: url(../img/hero-index2.jpg);
+    height: 400px;
+    background-size: cover;
+}
+.colored-hero {
+    background-color: #97101056;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/*SHOW PAGE*/
+.text-post {
+    font-size: 1rem;
+}
+/*FOOTER*/
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: var(--dark-gray);
+    color: white;
+    text-align: center;
+}
